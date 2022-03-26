@@ -7,7 +7,8 @@ module.exports = {
     description: 'Add a custom command',
     async execute (msg, args) {
         var embedMsg = new MessageEmbed();
-
+        
+        // check admin permissions
         if(!msg.member.permissions.has("ADMINISTRATOR")) {
             embedMsg
                 .setColor("RED")
